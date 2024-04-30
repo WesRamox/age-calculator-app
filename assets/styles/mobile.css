@@ -1,0 +1,126 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    min-height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+    gap: 50px;
+    background-color: hsla(0, 0%, 94%, 0.868);
+}
+
+.container {
+    padding: 40px 25px;
+    width: 90%;
+    background-color: hsl(0, 0%, 100%);
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px 20px 120px 20px;
+    gap: 15px;
+}
+
+.container form {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    z-index: 999;
+}
+
+.inputs {
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.inputs input {
+    font-size: 25px;
+    width: 100%;
+    padding: 20px 15px;
+    height: 40px;
+    border-radius: 5px;
+    font-weight: 600;
+    border: solid 1px rgba(182, 182, 182, 0.631);
+}
+
+form label {
+    color: hsl(0, 1%, 44%);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+form .box {
+    display: flex;
+    flex-direction: column;
+}
+
+.send {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.btn_submit {
+    background-color: transparent;
+    border: none;
+    background-color: hsl(259, 100%, 65%);
+    border-radius: 100%;
+    padding: 5px;
+    margin-top: 10px;
+    z-index: 999;
+    position: relative;
+}
+
+.send::before {
+    display: flex;
+    position: relative;
+    content: "";
+    width: 100%;
+    top: 44px;
+    height: 2px;
+    z-index: -1;
+    background-color: hsla(0, 0%, 73%, 0.379);
+}
+
+.send svg {
+    padding: 10px;
+    width: 50px;
+}
+
+.resultBox p span {
+    color:hsl(259, 100%, 65%);
+}
+
+.resultBox p {
+    font-style: italic;
+    font-size: 55px;
+    font-weight: 700;
+}

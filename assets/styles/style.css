@@ -1,0 +1,36 @@
+@media screen and (min-width: 600px) {
+    body {
+    }
+
+    .inputs {
+        justify-content: flex-start;
+    }
+
+    .inputs input {
+        width: 120px;
+        height: 50px;
+    }
+
+    .send {
+        flex-direction: row;
+    }
+
+    .send::before {
+        top: 10px;
+    }
+
+    .send svg {
+        width: 70px;
+        height: 60px;
+    }
+
+    .container {
+        max-width: 650px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .resultBox p {
+        font-size: 70px;
+    }
+}

@@ -22,22 +22,28 @@
       <div class="inputs">
         <div class="box">
           <label for="day">DAY</label>
-          <input type="number" name="day" id="day">
+          <input type="number" 
+          oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+          name="day" id="day" maxlength="2" min="1" required>
         </div>
 
         <div class="box">
           <label for="month">MONTH</label>
-          <input type="number" name="month" id="month">
+          <input type="number" 
+          oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+          name="month" id="month" maxlength="2" min="1" required>
         </div>
 
         <div class="box">
           <label for="year">YEAR</label>
-          <input type="number" name="year" id="year">
+          <input type="number" 
+          oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+          name="year" id="year" maxlength="4" min="1" required>
         </div>
       </div>
       <!-- <hr class="line"> -->
-      <div class="send">
-        <div class="btn_submit">
+      <div class="send" >
+        <div class="btn_submit" id="submit">
           <svg xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44"><g fill="none" stroke="#FFF" stroke-width="2"><path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"/></g></svg>
         </div>
       </div>
@@ -53,5 +59,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Wesley Ramos</a>.
   </div>
+
+  <script src="./assets/script/app.js"></script>
 </body>
 </html>
